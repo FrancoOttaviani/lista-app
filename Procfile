@@ -1,1 +1,1 @@
-web: bash src/views/layouts/main.hbs
+web: bash src/index.js
