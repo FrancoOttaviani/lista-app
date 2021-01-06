@@ -6,24 +6,14 @@ const methodOverride = require('method-override');
 const session = require ('express-session');
 const flash = require ('connect-flash');
 const passport = require('passport');
-const mongoose = require('mongoose');
-
 
 // inicializaciones
 const app = express();
-mongoose.connect('mongodb+srv://franco:q0AFNF3AlGU3usO6@cluster0.rn9zv.mongodb.net/mcga?retryWrites=true&w=majority', {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-})
-    .then(db => console.log('la base de datos esta conectada'))
-    .catch(err => console.error('error', err));
-
+require('./database');
 require('./config/passport');
 
 //setting
-app.set ('port', process.env.PORT);
+app.set ('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'))
 app.engine('.hbs', exphbs ({
     defaultLayout: 'main',
