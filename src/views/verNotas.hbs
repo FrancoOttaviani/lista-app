@@ -1,0 +1,30 @@
+<div class="row">
+    {{#each notes}}
+        <div class="col-md-3">
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h4 class="card-title d-flex justify-content-between aling-items-center">
+                        {{title}}
+                    </h4>
+                    
+                    <p>{{description}}</p>
+                </div>
+                <div class="card-body">
+                    {{#if user}}
+                        <p>Nota de: {{user.name}}</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    
+    {{else}}
+        <div class="card mx-auto">
+            
+            <div class="card-body">
+                <h3>No hay notas para mostrar </h3>
+                <hr>
+                <p class="lead">Registrese para crear una nueva nota..</p>
+            </div>
+        </div>
+    {{/each}}    
+</div>

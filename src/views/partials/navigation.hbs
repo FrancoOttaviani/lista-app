@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark font.size">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/verNotas"><h5>VER NOTAS</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    {{#if user}}
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Notas
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/notes">Ver mis notas</a>
+                            <a class="dropdown-item" href="/notes/add">Agregar notas</a>
+                            <a class="dropdown-item" href="/users/logout">Cerrar sesion</a>
+                        </div>
+                    </div>
+                    {{else}}
+                    <div class="form-group">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/users/signin">Ingresar</a>
+                        </li>
+                    </div>
+                    <div class="form-group">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/users/signup">Registrate</a>
+                        </li>
+                    </div>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
