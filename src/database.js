@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('list-app-y2021.herokuapp.com', {
+mongoose.connect('mongodb+srv://franco:q0AFNF3AlGU3usO6@cluster0.rn9zv.mongodb.net/mcga?retryWrites=true&w=majority', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
