@@ -23,7 +23,7 @@ mongoose.connect('mongodb+srv://franco:q0AFNF3AlGU3usO6@cluster0.rn9zv.mongodb.n
 require('./config/passport');
 
 //setting
-app.set ('port', process.env.PORT || 3000);
+app.set ('port', process.env.PORT);
 app.set('views', path.join(__dirname, 'views'))
 app.engine('.hbs', exphbs ({
     defaultLayout: 'main',
