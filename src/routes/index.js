@@ -5,14 +5,14 @@ const User = require('../models/User');
 
 router.get('/verNotas', async (req, res) => {
     const notes = await Note.find().lean();
-    const user = await User.find().lean();
-    res.render('verNotas', {notes, user});
+    res.render('verNotas', {notes});
+});
+
+router.get('/home', (req, res) => {
+    res.render('home')
 });
 
 router.get('/', (req, res) => {
-    res.render('home')
-});
-router.get('/home', (req, res) => {
     res.render('home')
 });
 
