@@ -1,1 +1,1 @@
-web: bash ./index.js
+web: bash src/index.js
