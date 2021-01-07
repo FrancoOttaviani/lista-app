@@ -1,5 +1,4 @@
 const express = require('express');
-const Handlebars = require('handlebars')
 const path = require('path');
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
